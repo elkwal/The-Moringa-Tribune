@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404
 import datetime as dt
 
+
 # Create your views here.
 def welcome(request):
     return render(request, 'welcome.html')
@@ -19,7 +20,7 @@ def past_days_news(request, past_date):
     except ValueError:
         # Raise 404 error when ValueError is thrown
         raise Http404()
-    
+        assert True
 
     if date == dt.date.today():
         return redirect(news_of_day)
