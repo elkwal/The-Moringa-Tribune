@@ -4,7 +4,7 @@ import datetime as dt
 
 
 def test_get_news_by_date(self):
-        test_date = '2017-03-17'
+        test_date = '2017-03-18'
         date = dt.datetime.strptime(test_date, '%Y-%m-%d').date()
         news_by_date = Article.days_news(date)
         self.assertTrue(len(news_by_date) == 0)
@@ -36,7 +36,7 @@ class ArticleTestClass(TestCase):
 
     def setUp(self):
         # Creating a new editor and saving it
-        self.james= Editor(first_name = 'James', last_name ='Muriuki', email ='james@moringaschool.com')
+        self.james= Editor(first_name = 'sly', last_name ='elkwal', email ='sly@moringaschool.com')
         self.james.save_editor()
 
         # Creating a new tag and saving it
